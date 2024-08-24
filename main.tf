@@ -50,4 +50,8 @@ module "vpc" {
   public_subnets       = slice(values(module.subnets.network_cidr_blocks), 3, 6)
 
   enable_nat_gateway = true
+
+  tags = {
+    Owner = data.aws_caller_identity.ctx.user_id
+  }
 }
