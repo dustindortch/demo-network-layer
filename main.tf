@@ -11,7 +11,9 @@ terraform {
   required_version = "~> 1.9"
 }
 
-provider "aws" {}
+provider "aws" {
+  allowed_account_ids = [var.account_id]
+}
 
 data "aws_availability_zones" "ctx" {}
 
