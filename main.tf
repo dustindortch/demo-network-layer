@@ -11,7 +11,11 @@ terraform {
   required_version = "~> 1.9"
 }
 
-provider "aws" {}
+provider "aws" {
+  assume_role {
+    role_arn = "arn:aws:iam::${var.account_id}:role/${var.assume_role_name}"
+  }
+}
 
 data "aws_availability_zones" "ctx" {}
 

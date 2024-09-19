@@ -1,3 +1,11 @@
+variable "account_id" {
+  type = string
+}
+
+variable "assume_role_name" {
+  type = string
+}
+
 variable "vpc_cidr_block" {
   default     = "10.42.0.0/16"
   description = "VPC IP address space."
