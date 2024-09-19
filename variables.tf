@@ -2,7 +2,7 @@ variable "account_id" {
   type = string
 }
 
-variable "assume_role_name" {
+variable "assume_role_arn" {
   type = string
 }
 
