@@ -14,3 +14,7 @@ variable "vpc_name" {
   description = "VPC name"
   type        = string
 }
+
+variable "assume_role_arn" {
+  type = string
+}
